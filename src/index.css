@@ -1,15 +1,38 @@
-body {
-  
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background-color: #f9fafb;
-  scroll-behavior: smooth;
+/* src/index.css */
+@import "@fontsource/inter";
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+@layer base {
+  body {
+    @apply m-0 p-0 bg-gray-50 font-inter scroll-smooth text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  a {
+    @apply text-blue-600 hover:text-blue-700 transition;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input, select, textarea {
+    @apply border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+
+  /* Specific section spacing */
+  section {
+    @apply py-16;
+  }
+
+  footer {
+    @apply bg-gray-800 text-white;
+  }
 }
-
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
